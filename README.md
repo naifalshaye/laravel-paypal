@@ -1,4 +1,5 @@
-# Laravel PayPal to communicate with PayPal API to get current balance and transactions
+# Laravel PayPal Package
+To communicate with PayPal API to get current balance and transactions.
 
 ## Installation
 ```
@@ -31,13 +32,14 @@ LARAVEL_PAYPAL_SIGNATURE=
 ```
 ## Usage
 
+```
 use Naif\PayPal\PayPal;
 
 $paypal = new PayPal();
 
 
-Get Current Balance
-```
+//Get Current Balance
+
 $balance = $paypal->getBalance();
 
 Response:
@@ -50,10 +52,9 @@ Response:
       "L_LONGMESSAGE0" => null
     ]
 ]
-```
 
-Get Transactions
-```
+//Get Transactions
+
 $transactions = $paypal->getTransactions();
 You can specify the number of days and number of transactions to retreive. Default (7 days, 10 transations)
 
