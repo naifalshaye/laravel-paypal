@@ -1,0 +1,24 @@
+{
+    "name": "naif/laravel-paypal",
+    "description": "Laravel PayPal to communicate with PayPal API to get current balance and transactions",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "php",
+        "paypal"
+    ],
+    "authors": [
+        {
+            "name": "Naif Alshaye",
+            "email": "naif@naif.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Naif\\PayPal\\": "src/"
+        }
+    }
+}
