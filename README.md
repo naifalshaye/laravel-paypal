@@ -12,6 +12,16 @@ Naif\PayPal\PayPalServiceProvider::class,
 
 'PayPal' => Naif\PayPal\Facades\PayPal::class,
 ```
+
+## Configuration
+Publish the package config file:
+```bash
+php artisan vendor:publish --provider="Naif\PayPal\PayPalServiceProvider"
+```
+
+Configuration will be published at [config/paypal.php].
+
+
 ## API KEYS
 Get your API access from PayPal website
 
