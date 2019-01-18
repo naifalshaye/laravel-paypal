@@ -8,7 +8,7 @@ class LaravelPayPal{
     private $info;
 
     public function __construct(){
-        $this->paypal = new LaravelPayPalConnector(config('paypal.username'), config('paypal.password'), config('paypal.signature'));
+        $this->paypal = new LaravelPayPalConnector(config('laravel-paypal.username'), config('laravel-paypal.password'), config('laravel-paypal.signature'));
     }
 
     public function getBalance()
@@ -24,9 +24,9 @@ class LaravelPayPal{
 
     public function getTransactions($days = 7, $count = 10)
     {
-        $this->info = 'USER=' . config('paypal.username')
-            . '&PWD=' . config('paypal.password')
-            . '&SIGNATURE=' . config('paypal.signature')
+        $this->info = 'USER=' . config('laravel-paypal.username')
+            . '&PWD=' . config('laravel-paypal.password')
+            . '&SIGNATURE=' . config('laravel-paypal.signature')
             . '&METHOD=TransactionSearch'
             . '&TRANSACTIONCLASS=RECEIVED'
             . '&STARTDATE='.date_create(date('Y-m-d',strtotime("-".$days." days")))->format('c')
