@@ -1,10 +1,10 @@
 <?php
 
-namespace Naif\PayPal;
+namespace Naif\LaravelPayPal;
 
 use Exception;
 
-class PayPalConnector
+class LaravelPayPalConnector
 {
     /**
      * API Version

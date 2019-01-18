@@ -1,14 +1,14 @@
 <?php
 
-namespace Naif\PayPal;
+namespace Naif\LaravelPayPal;
 
-class PayPal{
+class LaravelPayPal{
 
     private $paypal;
     private $info;
 
     public function __construct(){
-        $this->paypal = new PayPalConnector(config('paypal.username'), config('paypal.password'), config('paypal.signature'));
+        $this->paypal = new LaravelPayPalConnector(config('paypal.username'), config('paypal.password'), config('paypal.signature'));
     }
 
     public function getBalance()

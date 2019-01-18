@@ -1,10 +1,10 @@
 <?php
 
-namespace Naif\PayPal\Facades;
+namespace Naif\LaravelPayPal\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class PayPal extends Facade{
+class LaravelPayPal extends Facade{
 
     protected static function getFacadeAccessor()
     {

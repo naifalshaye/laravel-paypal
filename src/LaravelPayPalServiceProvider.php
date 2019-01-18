@@ -1,10 +1,10 @@
 <?php
 
-namespace Naif\PayPal;
+namespace Naif\LaravelPayPal;
 
 use Illuminate\Support\ServiceProvider;
 
-class PayPalServiceProvider extends ServiceProvider
+class LaravelPayPalServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -15,7 +15,7 @@ class PayPalServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/config/paypal.php' => config_path('paypal.php'),
+                __DIR__.'/config/laravel-paypal.php' => config_path('laravel-paypal.php'),
             ]);
         }
     }
@@ -28,11 +28,11 @@ class PayPalServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/config/paypal.php', 'PayPal'
+            __DIR__ . '/config/laravel-paypal.php', 'LaravelPayPal'
         );
 
         $this->app->bind('laravel-paypal', function(){
-            return new PayPal();
+            return new LaravelPayPal();
         });
     }
 }

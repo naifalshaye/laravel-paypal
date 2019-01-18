@@ -18,7 +18,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Naif\\PayPal\\": "src/"
+            "Naif\\LaravelPayPal\\": "src/"
         }
     }
 }
