@@ -8,18 +8,18 @@ composer require naif/laravel-paypal
 
 Add service provider and alias to config/app.php
 ```
-Naif\PayPal\PayPalServiceProvider::class,
+Naif\LaravelPayPal\LaravelPayPalServiceProvider::class,
 
-'PayPal' => Naif\PayPal\Facades\PayPal::class,
+'PayPal' => Naif\LaravelPayPal\Facades\LaravelPayPal::class,
 ```
 
 ## Configuration
 Publish the package config file:
 ```bash
-php artisan vendor:publish --provider="Naif\PayPal\PayPalServiceProvider"
+php artisan vendor:publish --provider="Naif\LaravelPayPal\LaravelPayPalServiceProvider"
 ```
 
-Configuration will be published at [config/paypal.php].
+Configuration will be published at [config/laravel-paypal.php].
 
 
 ## API KEYS
@@ -43,9 +43,9 @@ LARAVEL_PAYPAL_SIGNATURE=
 ## Usage
 
 ```
-use Naif\PayPal\PayPal;
+use Naif\LaravelPayPal\LaravelPayPal;
 
-$paypal = new PayPal();
+$paypal = new LaravelPayPal();
 
 
 //Get Current Balance
