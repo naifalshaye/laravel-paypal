@@ -6,7 +6,7 @@ To communicate with PayPal API to get current balance and transactions.
 composer require naif/laravel-paypal
 ```
 
-Add service provider and alias to config/app.php
+If your Laravel below 5.5 you need to add service provider and alias to config/app.php
 ```
 Naif\LaravelPayPal\LaravelPayPalServiceProvider::class,
 
