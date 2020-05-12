@@ -65,7 +65,7 @@ class LaravelPayPal{
                 );
             }
         }
-        if (array_key_exists('transactions', $transactions)) {
+        if (array_has($transactions,'transactions')) {
             $response['transactions'] = array_slice($transactions['transactions'], 0, $count);
         } else{
             $response['transactions'] = [];
