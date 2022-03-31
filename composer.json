@@ -20,5 +20,12 @@
         "psr-4": {
             "Naif\\LaravelPayPal\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Naif\\LaravelPayPal\\LaravelPayPalServiceProvider"
+            ]
+        }
     }
 }
